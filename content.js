@@ -1,4 +1,3 @@
-console.log("I am a content script");
 const ipoResult = (e) => {
     let containerDiv = document.getElementById('results')
     containerDiv.innerHTML = ""
@@ -34,7 +33,6 @@ const ipoResult = (e) => {
         })
         .then(response => response.json())
         .then(data => {
-            console.log(`${profile.name}:: ${data.message}`)
             containerDiv.innerHTML += `<strong>${profile.name}</strong>: ${data.message} <br />`
         })
         .catch((error) => {
