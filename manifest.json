@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "name": "Easy IPO Result Viewer",
+    "description": "Easy IPO",
+    "content_scripts": [
+        {   
+            "matches": [
+                "https://iporesult.cdsc.com.np/"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    "browser_action": {
+        "default_title": "Easy IPO Result Viewer",
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "tabs"
+    ]
+}
